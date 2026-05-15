@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* Base Style */
+body {
+    margin: 0;
+    padding: 32px;
+    background-color: #111828;
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    padding: 32px;
+    background: repeating-linear-gradient(
+        135deg,
+        rgba(200,80,255,0.25),
+        rgba(200,80,255,0.25) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+}
+.card{
+    height: 90px;
+    background: #c814ce;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+/* 横4列 */
+.col-4 .card {
+    width: calc((100% - 24px * 3) / 4);
+}
+/* 横2列 */
+.col-2 .card {
+    width: calc((100% - 24px) / 2);
+}
+/* 横6列 */
+.col-6 .card {
+    width: calc((100% - 24px * 5) / 6);
+}
